@@ -1,0 +1,78 @@
+.background-wave {
+    width: 2000px;
+    height: 2000px;
+    position: fixed;
+    top: -5%;
+    left: -20%;
+    border-radius: 50%;
+    transform: translate(-50%);
+    background: linear-gradient(-45deg, #00cba9 0%, #00b395 100%);
+    content: " ";
+    z-index: -1;
+}
+
+.background-wave-reverse {
+    width: 2000px;
+    height: 2000px;
+    position: fixed;
+    top: -5%;
+    right: -20%;
+    border-radius: 50%;
+    transform: translate(50%);
+    background: linear-gradient(-45deg, #00cba9 0%, #00b395 100%);
+    content: " ";
+    z-index: -1;
+}
+
+.container-login, .container-register {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-login .left-section {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.container-login .left-section img {
+    width: 500px;
+}
+
+.container-login .right-section {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-self: center;
+}
+
+.container-login .right-section .login-section {
+    text-align: -webkit-center;
+    width: 380px;
+}
+
+.container-register .left-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+}
+
+.container-register .right-section {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.container-register .left-section .regis-section {
+    text-align: -webkit-center;
+    width: 380px;
+}
+
+.container-register .right-section img{
+    width: 500px;
+}
+

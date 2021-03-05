@@ -1,0 +1,236 @@
+.button {
+    padding: 15px 0;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.button input {
+    border-radius: 20px;
+    background: #00cba9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    width: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: ease-out .3s;
+}
+
+.button .edge {
+    background: transparent;
+    color: #00cba9;
+    border: 1px solid #00cba9;
+}
+
+.button .edge:hover {
+    background: #00b395;
+    color: #fff;
+    border: 1px solid #00b395;
+}
+
+.button input:hover {
+    background: #00b395;
+}
+
+.button .btn {
+    text-align: center;
+}
+
+.button .clear {
+    background: none;
+    color: #343434;
+    border: none;
+    transition: ease-in-out .3s;
+}
+
+.button .clear:hover{
+    background: none;
+    color: #00cba9;
+}
+
+.text-link {
+    margin: 0 15px;
+    text-align: right;
+}
+
+.text-link a {
+    text-decoration: none;
+    color: #343434;
+    font-size: 20px;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    font-weight: 500;
+    position: absolute;
+    right: 120px;
+}
+
+.text-link a::before {
+    content: '\2039';
+    color: #00b395;
+    font-size: 20px;
+    left: -15px;
+    position: absolute;
+    transition: ease-in-out 0.3s;
+}
+
+.text-link a:hover{
+    color: #00b395;
+}
+.text-link a:hover::before {
+    left: -20px;
+}
+
+.heading-group {
+    display: table;
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 25px;
+}
+
+.heading-group h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+/* .pd-r-15 {
+    padding-right: 15px;
+} */
+
+.size-15 {
+    font-size: 15px;
+}
+
+.size-25 {
+    font-size: 25px;
+}
+
+.size-36 {
+    font-size: 36px;
+}
+
+.size-48 {
+    font-size: 48px;
+}
+
+.field {
+    position: relative;
+    max-width: 380px;
+    height: 55px;
+    margin: 15px 0;
+    background: #eaeaea;
+    color: #343434;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    border-radius: 50px;
+    align-items: center;
+    text-align: left;
+}
+
+.field i {
+    text-align: center;
+    align-items: center;
+}
+
+.field input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.field input::placeholder {
+    color: #6e6e6e;
+}
+.field select {
+    border: none;
+    outline: none;
+    background: none;
+    width: 95%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #6e6e6e;
+    margin: 0;
+}
+
+.inputtext {
+    margin: 15px;
+    text-align: left;
+}
+
+.inputtext label{
+    margin-left: 20px;
+}
+.input-text {
+    position: relative;
+    max-width: 380px;
+    height: 45px;
+    background: transparent;
+    color: #343434;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    border-radius: 10px;
+    align-items: center;
+    border: 1px solid #cecccc;
+    margin-top: 5px;
+    padding-right: 10px;
+}
+
+.input-text i {
+    text-align: center;
+    align-items: center;
+}
+
+.input-text input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.input-text input::placeholder{
+    color: #6e6e6e;
+}
+
+.input-text select {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #6e6e6e;
+    margin: 0;
+}
+
+.circle-button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #00cba9;
+    color: #00cba9;
+    transition: ease-out .4s;
+}
+
+.circle-button:hover{
+    background: rgb(0, 203, 169);
+    color: #fff;
+}
