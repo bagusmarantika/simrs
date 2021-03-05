@@ -5,7 +5,7 @@ import ToogleDataDokter from '../component/toogleMenu/ToogleDataDokter'
 const DokterPage = () => {
     return (
         <div>
-            <Header/>
+            <Header user={'Dokter'}/>
             <ToogleDataDokter />
         </div>
     )

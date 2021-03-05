@@ -5,7 +5,7 @@ import ToogleData from '../component/toogleMenu/ToogleData'
 const AdminPage = () => {
     return (
         <div>
-            <Header />
+            <Header user={'Admin'}/>
             <ToogleData />
         </div>
     )

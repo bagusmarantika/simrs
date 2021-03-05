@@ -5,7 +5,7 @@ import ToogleDataOp from '../component/toogleMenu/ToogleDataOp'
 const OperatorPage = () => {
     return (
         <div>
-            <Header />
+            <Header user={'Operator'}/>
             <ToogleDataOp />
         </div>
     )

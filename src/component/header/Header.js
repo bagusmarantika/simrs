@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
-const Header = () => {
+const Header = ({user}) => {
     return (
         <header>
             <div className='header-left'>
@@ -22,7 +22,7 @@ const Header = () => {
                         <i className='icon-header'>
                             <FontAwesomeIcon icon={['fas', `user`]}  />
                         </i>
-                        Admin <span style={{fontSize: '10px'}}>&#9660;</span>
+                        {user} <span style={{fontSize: '10px'}}>&#9660;</span>
                     </h4>
                     <ul>
                         <li>Profile</li>
