@@ -35,18 +35,18 @@ export const CircleButton = ({onClick, icon}) => {
     )
 }
 
-export const InputField = ({placeholder, icon, type}) => {
+export const InputField = ({placeholder, icon, type, onChange, id}) => {
     return (
-        <div className='field'>
+        <div className='field pd-r-15'>
             <i className='icons'>
                 <FontAwesomeIcon icon={['fas', `${icon}`]}  />
             </i>
-            <input type={type} className='fld' placeholder={placeholder}/>
+            <input id={id} type={type} className='fld' placeholder={placeholder} onChange={onChange}/>
         </div>
     )
 }
 
-export const InputText = ({placeholder, icon, type, text}) => {
+export const InputText = ({placeholder, icon, type, text, onChange, id}) => {
     return (
         <div className='inputtext'>
             <label for={text}>{text}</label>
@@ -54,19 +54,19 @@ export const InputText = ({placeholder, icon, type, text}) => {
                 <i className='icon-text'>
                     <FontAwesomeIcon icon={['fas', `${icon}`]} />
                 </i>
-                <input name={text} type={type} className='input-inpt' placeholder={placeholder} />
+                <input id={id} onChange={onChange} name={text} type={type} className='input-inpt' placeholder={placeholder} />
             </div>
         </div>
     )
 }
 
-export const InputSelect = ({name, data, icon}) => {
+export const InputSelect = ({name, data, icon, onChange, id}) => {
     return(
-        <div className='field pd-r-15'>
+        <div className='field'>
             <i className='icons'>
                 <FontAwesomeIcon icon={['fas', `${icon}`]}  />
             </i>
-            <select name={name}>
+            <select id={id} name={name} onChange={onChange}>
                 <option value='Pilih User' disabled selected>Pilih User</option>
                 {data.map((d, index) => (
                     <option value={d.value} key={index}>{d.value}</option>
@@ -76,7 +76,7 @@ export const InputSelect = ({name, data, icon}) => {
     )
 }
 
-export const InputTextSelect = ({text, data, icon}) => {
+export const InputTextSelect = ({text, data, icon, onChange, id}) => {
     return (
         <div className='inputtext'>
             <label for={text}>{text}</label>
@@ -84,7 +84,7 @@ export const InputTextSelect = ({text, data, icon}) => {
                 <i className='icon-text'>
                     <FontAwesomeIcon icon={['fas', `${icon}`]} />
                 </i>
-                <select name={text}>
+                <select id={id} onChange={onChange} name={text}>
                     <option value={`Pilih ${text}`} selected disabled>{`Pilih ${text}`}</option>
                     {data.map((d, index) => (
                         <option value={d.value} key={index}>{d.value}</option>
@@ -106,5 +106,5 @@ export const HeadingGroup = ({title, size}) => {
 }
 
 Button.defaultProps = {
-    types: 'submit'
+    types: ''
 }

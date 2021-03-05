@@ -23,10 +23,6 @@ const InputPemeriksaan = () => {
     useEffect(() => {
         
     }, []);
-
-    for (let i=0; i< state.data; i++){
-
-    }
     return (
         <div className='container'>
             <HeadingGroup title={'Pemeriksaan Pasien'} size={'size-36'} />

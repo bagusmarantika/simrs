@@ -10,6 +10,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AdminPage from './pages/AdminPage';
 import OperatorPage from './pages/OperatorPage';
 import DokterPage from './pages/DokterPage';
+import firebase from '../src/config/firebase';
+
+// console.log(firebase)
 
 ReactDOM.render(
   <Router>
