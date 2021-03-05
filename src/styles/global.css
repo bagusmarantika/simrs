@@ -76,3 +76,43 @@
     width: 500px;
 }
 
+.regis-section h2, .login-section h2 {
+    color: #00b395;
+} 
+
+/* Responsive */
+ @media print, screen and (max-width: 960px){
+     .background-wave {
+        display: none;
+     }
+     .background-wave-reverse {
+         display: none;
+     }
+     .container-login, .container-register{
+         display: block;
+         grid-template-columns: unset;
+         grid-gap: unset;
+         width: 100vw;
+         height: 100vh;
+     }
+     .container-login .left-section {
+        display: none;
+    }
+    .container-login .right-section {
+        display: block;
+    }
+    .container-login .right-section .login-section{
+        display: block;
+        width: 100%;
+    }
+    .container-register .right-section {
+        display: none;
+    }
+    .container-register .left-section {
+        display: block;
+    }
+    .container-register .left-section .regis-section{
+        display: block;
+        width: 100%;
+    }
+ }

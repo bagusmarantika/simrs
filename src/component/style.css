@@ -197,7 +197,7 @@ header .header-right a:hover ul {
     border: 1px solid #ddd;
     background: #fff;
 }
-.toogle-menu ul {
+.toogle-menu .primary-menu {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -205,7 +205,7 @@ header .header-right a:hover ul {
     margin: 0;
 }
 
-.toogle-menu ul li {
+.toogle-menu .primary-menu li {
     padding: 15px 25px;
     background: #fff;
     border: 1px solid #ddd;
@@ -220,11 +220,11 @@ header .header-right a:hover ul {
     font-size: 20px;
 }
 
-.toogle-menu ul li:hover {
+.toogle-menu .primary-menu li:hover {
     background: #ddd;
 }
 
-.toogle-menu ul .actived {
+.toogle-menu .primary-menu .actived {
     border-bottom: 2px solid #00cba9;
 }
 
@@ -243,4 +243,104 @@ header .header-right a:hover ul {
 .toogle-content .showed {
     display: block;
     padding-top: 15px;
+}
+
+.toogle-menu .mobile-menu {
+    border-bottom: 1px solid #ddd;
+    display: none;
+}
+
+.toogle-menu .mobile-menu h4 {
+    margin: 10px 0;
+}
+
+.toogle-menu .mobile-menu ul li {
+    display: block;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.toogle-menu .mobile-menu ul li a {
+    border-bottom: 1px solid #00cba9;
+}
+
+.toogle-menu .mobile-menu ul {
+    display: none;
+    padding-left: 0;
+    transition: ease-in-out .3s;
+}
+
+.toogle-menu .mobile-menu ul li:hover {
+    color: #00cba9;
+}
+
+.toogle-menu .on-click ul {
+    display: block;
+}
+
+/* Responsive */
+
+@media print, screen and (max-width: 960px){
+    .row {
+        display: block;
+    }
+
+    .div50 .input-text{
+        max-width: 380px;
+    }
+
+    .div25 {
+        position: relative;
+        margin: 0 20%;
+    }
+
+    .div30 {
+        position: relative;
+        margin: 0 20%;
+    }
+
+    .div50 {
+        position: relative;
+        margin: 0 20%;
+    }
+
+    .container-inner {
+        text-align: center;
+    }
+}
+
+@media print, screen and (max-width: 780px) {
+    .toogle-menu .primary-menu {
+        display: none;
+    }
+
+    .toogle-menu .primary-menu li {
+        width: auto;
+    }
+
+    .container .heading-group {
+        text-align: center;
+    }
+
+    .toogle-menu .mobile-menu {
+        display: block;
+    }
+
+    .container-inner .circle-button {
+        margin: 10px auto;
+    }
+    .div25 {
+        position: relative;
+        margin: 0 10%;
+    }
+
+    .div30 {
+        position: relative;
+        margin: 0 10%;
+    }
+
+    .div50 {
+        position: relative;
+        margin: 0 10%;
+    }
 }

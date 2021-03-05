@@ -4,6 +4,7 @@ import GraphicChart from '../grafik/GraphicChart';
 import InputObat from '../inputObat/inputObat';
 import InputTransaksi from '../inputTransaksi/InputTransaksi';
 import InputUser from '../InputUser/InputUser';
+import MobileMenu from '../mobileMenu/MobileMenu';
 import PendaftaranPasien from '../pendaftaranPasien/pendaftaranPasien';
 import ViewData from '../viewData/ViewData';
 import ViewDataObat from '../viewData/ViewDataObat';
@@ -15,9 +16,10 @@ const ToogleData = () => {
     const [menu2, setMenu2] = useState(false);
     const [menu3, setMenu3] = useState(false);
     const [menu4, setMenu4] = useState(true);
-    const [menu5, setMenu5] = useState(true);
+    const [menu5, setMenu5] = useState(false);
     const [subMenu1, setSubMenu1] = useState(true);
     const [subMenu2, setSubMenu2] = useState(false);
+    const [mobile, setMobile] = useState(false);
 
     const handleClickMenu1 = () => {
         setMenu1(true);
@@ -68,11 +70,16 @@ const ToogleData = () => {
         setSubMenu2(true);
     }
 
+    const handleMobileMenu = () => {
+        setMobile(!mobile);
+    }
+
     const isMenu1 = menu1? 'actived' :'';
     const isMenu2 = menu2? 'actived' :'';
     const isMenu3 = menu3? 'actived' :'';
     const isMenu4 = menu4? 'actived' :'';
     const isMenu5 = menu5? 'actived' :'';
+    const showMobileMenu = mobile ? 'on-click' : '';
 
     const isOpen1 = menu1 ? 'opened' : '';
     const isOpen2 = menu2 ? 'opened' : '';
@@ -85,13 +92,25 @@ const ToogleData = () => {
 
     return (
         <div className='toogle-menu'>
-            <ul>
+            <ul className='primary-menu'>
                 <li onClick={handleClickMenu4} className={isMenu4}><a href="javascript:void(0)">User</a></li>
                 <li onClick={handleClickMenu1} className={isMenu1}><a href="javascript:void(0)">Pasien</a></li>
                 <li onClick={handleClickMenu2} className={isMenu2}><a href="javascript:void(0)">Obat</a></li>
                 <li onClick={handleClickMenu3} className={isMenu3}><a href="javascript:void(0)">Transaksi</a></li>
                 <li onClick={handleClickMenu5} className={isMenu5}><a href="javascript:void(0)">Grafik</a></li>
             </ul>
+            <div className={['mobile-menu', showMobileMenu].join(' ')}>
+                <div className='title-mobile-menu'>
+                    <h4 onClick={handleMobileMenu}>Menu <span style={{fontSize: '10px'}}>&#9660;</span></h4>
+                    <ul className='mobile-menu-list'>
+                    <li onClick={handleClickMenu4} className={isMenu4}><a href="javascript:void(0)">User</a></li>
+                    <li onClick={handleClickMenu1} className={isMenu1}><a href="javascript:void(0)">Pasien</a></li>
+                    <li onClick={handleClickMenu2} className={isMenu2}><a href="javascript:void(0)">Obat</a></li>
+                    <li onClick={handleClickMenu3} className={isMenu3}><a href="javascript:void(0)">Transaksi</a></li>
+                    <li onClick={handleClickMenu5} className={isMenu5}><a href="javascript:void(0)">Grafik</a></li>
+                    </ul>
+                </div>
+            </div>
 
             <div className={['toogle-content', isOpen4].join(' ')}>
                 <div className={isOpenSub1}>

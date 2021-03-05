@@ -26,7 +26,7 @@ class GraphicChart extends Component {
 
   render() {
     return (
-      <div className="app-chart" style={{marginTop: '25px'}}>
+      <div className="app-chart container">
 		  <HeadingGroup title={'Grafik Kunjungan Pasien'} size={'size-36'} />
         <div className="">
           <div className="mixed-chart">
@@ -34,7 +34,7 @@ class GraphicChart extends Component {
               options={this.state.options}
               series={this.state.series}
               type="line"
-              width="1050"
+              width="100%"
 			  height="400"
             />
           </div>

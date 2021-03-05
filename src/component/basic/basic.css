@@ -234,3 +234,11 @@
     background: rgb(0, 203, 169);
     color: #fff;
 }
+
+/* Responsive */
+
+@media print, screen and (max-width: 1000px){
+    .inputtext label{
+        margin-left: unset;
+    }
+}

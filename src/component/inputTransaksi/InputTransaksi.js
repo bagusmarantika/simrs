@@ -14,10 +14,10 @@ const InputTransaksi = () => {
             <div className='container-inner'>
                 <form action={''}>
                 <div className='row'>
-                    <div className='div25'>
+                    <div className='div30'>
                         <InputTextSelect text={'ID Pemeriksaan'} data={dataPemeriksaan} icon={'clinic-medical'} />
                     </div>
-                    <div className='div25'>
+                    <div className='div30'>
                         <InputText placeholder={'Nama Pasien'} text={'Nama Pasien'} icon={'user'} type={'text'} />
                     </div>
                     <div className='div30'>

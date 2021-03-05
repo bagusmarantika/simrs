@@ -9,6 +9,7 @@ const ToogleDataDokter = () => {
     const [menu2, setMenu2] = useState(false);
     const [subMenu1, setSubMenu1] = useState(true);
     const [subMenu2, setSubMenu2] = useState(false);
+    const [mobile, setMobile] = useState(false);
 
     const handleClickMenu1 = () => {
         setMenu1(true);
@@ -30,8 +31,13 @@ const ToogleDataDokter = () => {
         setSubMenu2(true);
     }
 
+    const handleMobileMenu = () => {
+        setMobile(!mobile);
+    }
+
     const isMenu1 = menu1? 'actived' :'';
     const isMenu2 = menu2? 'actived' :'';
+    const showMobileMenu = mobile ? 'on-click' : '';
 
     const isOpen1 = menu1 ? 'opened' : '';
     const isOpen2 = menu2 ? 'opened' : '';
@@ -41,10 +47,19 @@ const ToogleDataDokter = () => {
 
     return (
         <div className='toogle-menu'>
-            <ul>
+            <ul className='primary-menu'>
                 <li onClick={handleClickMenu1} className={isMenu1}><a href="javascript:void(0)">Data Pasien</a></li>
                 <li onClick={handleClickMenu2} className={isMenu2}><a href="javascript:void(0)">Pemeriksaan</a></li>
             </ul>
+            <div className={['mobile-menu', showMobileMenu].join(' ')}>
+                <div className='title-mobile-menu'>
+                    <h4 onClick={handleMobileMenu}>Menu <span style={{fontSize: '10px'}}>&#9660;</span></h4>
+                    <ul className='mobile-menu-list'>
+                    <li onClick={handleClickMenu1} className={isMenu1}><a href="javascript:void(0)">Data Pasien</a></li>
+                    <li onClick={handleClickMenu2} className={isMenu2}><a href="javascript:void(0)">Pemeriksaan</a></li>
+                    </ul>
+                </div>
+            </div>
 
             <div className={['toogle-content', isOpen1].join(' ')}>
                 <ViewData />
