@@ -2,6 +2,23 @@ import React from 'react'
 import { HeadingGroup } from '../basic/basic'
 
 const ViewDataTransaksi = () => {
+    const dataTransaksi = [
+        {id: 'id-001', id_pasien: '3302270909980001', alamat: 'Jl Karang Kobar', nama_pasien: 'bagus', tgl: '21 Februari 2021', obat: [
+            {nama: 'Obat A', jumlah: 2, harga: 15000},
+            {nama: 'Obat B', jumlah: 1, harga: 30000},
+            {nama: 'Obat C', jumlah: 1, harga: 20000}
+        ]},
+        {id: 'id-002', id_pasien: '3302270909980002', alamat: 'Jl Karang Nanas', nama_pasien: 'marant', tgl: '21 Februari 2021', obat: [
+            {nama: 'Obat A', jumlah: 1, harga: 15000},
+            {nama: 'Obat B', jumlah: 1, harga: 30000},
+            {nama: 'Obat C', jumlah: 1, harga: 20000}
+        ]},
+        {id: 'id-003', id_pasien: '3302270909980003', alamat: 'Jl Karang Rejo', nama_pasien: 'fulan', tgl: '22 Februari 2021', obat: [
+            {nama: 'Obat A', jumlah: 1, harga: 15000},
+            {nama: 'Obat B', jumlah: 1, harga: 30000}
+        ]},
+    ];
+
     return (
         <div className='container'>
             <HeadingGroup title={'Data Transaksi'} size={'size-36'} />
@@ -18,22 +35,20 @@ const ViewDataTransaksi = () => {
                             <th>Action</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>3302272405960002</td>
-                                <td>Fulan</td>
-                                <td>Jl Gunung Cermai</td>
-                                <td>3</td>
-                                <td>Rp 52.000</td>
-                                <td><a href="">Edit</a> | <a href="">Delete</a></td>
-                            </tr>
-                            <tr>
-                                <td>3302272405960002</td>
-                                <td>Fulanah</td>
-                                <td>Jl Gunung Cermai</td>
-                                <td>2</td>
-                                <td>Rp 35.000</td>
-                                <td><a href="">Edit</a> | <a href="">Delete</a></td>
-                            </tr>
+                            {dataTransaksi.map((data, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>{data.id_pasien}</td>
+                                        <td>{data.nama_pasien}</td>
+                                        <td>{data.alamat}</td>
+                                        <td>{data.obat.length}</td>
+                                        <td>Rp {data.obat.reduce((val, element) => {
+                                            return val + (element.harga*element.jumlah)
+                                        }, 0)}</td>
+                                        <td><a href="">Edit</a> | <a href="">Delete</a></td>
+                                    </tr>
+                                )
+                            })}
                         </tbody>
                     </table>
                 </div>

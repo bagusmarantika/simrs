@@ -33,7 +33,7 @@ const ViewDataObat = () => {
                                 <td>BB</td>
                                 <td>1 Januari 2022</td>
                                 <td>20</td>
-                                <td>Rp1 15.000</td>
+                                <td>Rp 35.000</td>
                                 <td>Sirup</td>
                                 <td><a href="">Edit</a> | <a href="">Delete</a></td>
                             </tr>

@@ -46,7 +46,7 @@ export const InputField = ({placeholder, icon, type, onChange, id}) => {
     )
 }
 
-export const InputText = ({placeholder, icon, type, text, onChange, id}) => {
+export const InputText = ({placeholder, icon, type, text, onChange, id, value, readOnly}) => {
     return (
         <div className='inputtext'>
             <label for={text}>{text}</label>
@@ -54,7 +54,7 @@ export const InputText = ({placeholder, icon, type, text, onChange, id}) => {
                 <i className='icon-text'>
                     <FontAwesomeIcon icon={['fas', `${icon}`]} />
                 </i>
-                <input id={id} onChange={onChange} name={text} type={type} className='input-inpt' placeholder={placeholder} />
+                <input id={id} onChange={onChange} name={text} type={type} className='input-inpt' placeholder={placeholder} value={value} readOnly={readOnly}/>
             </div>
         </div>
     )
